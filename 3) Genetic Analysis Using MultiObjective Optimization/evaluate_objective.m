@@ -11,7 +11,8 @@ function f = evaluate_objective(x, M, V, fbamodel, geni, reaction_expression)
 % This functions is basically written by the user who defines his/her own
 % objective function. Make sure that the M and V matches your initial user
 % input.
-
+load('rCAI_norm834.mat')
+yt=x'.*rCAI_norm834; 
 yt=x';      % x' is the transpose of x, that is "child(j,1:V)" in the function genetic_operator, i.e. the array of gene expressions
 yt=yt(1:V);     % needed because sometimes, and especially with child_3 in genetic_operator, there is a bug and all the child is passed to this function here, including the final rank, crowding distance and objective functions (instead of passing only the V decision variables)
 fbamodel.present=ones(fbamodel.nrxn,1);

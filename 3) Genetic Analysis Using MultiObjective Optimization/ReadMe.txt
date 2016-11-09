@@ -1,0 +1,1 @@
+To conduct Genetic Analysis Using MultiObjective Optimization, start with the RUN file. The 140 represents the number of individuals and the 1400 represents the number of populations. NEXT, to find the exploration of the objective space, run the plot_and_export_color.m. To find the Pareto front, run the append_and_plot_solutions.m.
