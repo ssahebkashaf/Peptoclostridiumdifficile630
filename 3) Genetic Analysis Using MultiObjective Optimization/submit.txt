@@ -1,0 +1,12 @@
+#
+# Submit a matlab job
+#
+executable = /usr/bin/cl-matlab
+arguments = -nosplash -nojvm  -nodesktop -nodisplay -r lancia
+universe = vanilla
+getenv   = True          # MATLAB needs local environment
+log = mat.log
+output = mat.out
+error = mat.err
+nice_user=TRUE
+queue 1 
